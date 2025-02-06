@@ -12,12 +12,12 @@ def count_characters(text):
     return character_count
 
 def print_book_report(path, word_count, character_count):
-    #print(f'--- Begin report of {path} ---')
-    #print(f'{word_count} words found in the document')
-    #for key, value in character_count:
-    #    print(f'The {key} character was found {value} times')
-    #print('--- End report ---')
-    print(character_count)
+    print(f'--- Begin report of {path} ---')
+    print(f'{word_count} words found in the document\n')
+    for key in character_count:
+        if key.isalpha():
+            print(f'The \'{key}\' character was found {character_count[key]} times')
+    print('--- End report ---')
 
 def main():
     path = "books/frankenstein.txt"
